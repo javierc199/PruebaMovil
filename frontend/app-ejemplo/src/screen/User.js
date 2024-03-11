@@ -38,7 +38,7 @@ const User = () => {
 
     const fetchData = async () => {
         try {
-            const response = await fetch('http://192.168.100.35:9004/nombres')
+            const response = await fetch('http://10.118.82.6:9004/nombres')
             const jsonData = await response.json()
             setUsers(jsonData)
         } catch (e) {
@@ -49,7 +49,7 @@ const User = () => {
 
     const deleteUser = async (item) => {
         try {
-            const response = await fetch(`http://192.168.100.35:3000/nombres/${item.id}`, {
+            const response = await fetch(`http://10.118.82.6:9004/nombres/${item.id}`, {
                 method: 'DELETE'
             })
             if (response.status === 204) {
@@ -63,7 +63,7 @@ const User = () => {
 
     const editUser = async () => {
         try {
-            const response = await fetch(`http://192.168.100.35:3000/nombres/${selectedUser.id}`, {
+            const response = await fetch(`http://10.118.82.6:9004/nombres/${selectedUser.id}`, {
                 method: 'PUT',
                 headers: {
                     "Content-Type": 'application/json'
@@ -91,7 +91,7 @@ const User = () => {
     }
     const createUser = async () => {
         try {
-            const response = await fetch('http://192.168.100.35:3000/nombres', {
+            const response = await fetch('http://10.118.82.6:9004/nombres', {
                 method: 'POST',
                 headers: {
                     "Content-Type": 'application/json'

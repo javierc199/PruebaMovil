@@ -7,6 +7,7 @@ import ListComponent from "./componentes/list/List";
 import User from './screen/User'
 import Chat from "./screen/Chat";
 import Pdf from "./screen/Pdf";
+import Texto from "./screen/Texto";
 
 
 const Tab = createBottomTabNavigator()
@@ -42,6 +43,12 @@ const Navigation = () => {
                 tabBarLabel: 'pdf',
                 tabBarIcon: ({color, size}) => (
                     <MaterialCommunityIcons name={'file-pdf-box'} color={color} size={size}/>
+                )
+            }}/>
+            <Tab.Screen name={'Texto'} component={Texto} options={{
+                tabBarLabel: 'Text',
+                tabBarIcon: ({color, size}) => (
+                    <MaterialCommunityIcons name={'brain'} color={color} size={size}/>
                 )
             }}/>
         </Tab.Navigator>

@@ -8,21 +8,22 @@ const Chat = () => {
 
     const getResultFromOpenApi = async () => {
         try {
-            const response = await fetch('http://192.168.100.35:9004/openapi', {
+            const response = await axios.get('http://10.118.82.6:9004/openapi', {
                 method: 'POST',
                 headers: {
                     "Content-Type": 'application/json',
-                    "Authorization": "Bearer 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" // Reemplaza YOUR_API_KEY con tu clave de API
+                    "Authorization": "Bearer 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" 
                 },
                 body: JSON.stringify({prompt})
             })
-            const jsonData = await response.json()
+            const jsonData = response.data;
             setResult(`${jsonData.result} y los token utilizados fueron ${jsonData.token} `)
         } catch (error) {
             console.log(error)
         }
     }
     
+
 
 
     return (

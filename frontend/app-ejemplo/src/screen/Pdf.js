@@ -36,7 +36,7 @@ const Pdf = () => {
             data.append('question', question);
             data.append('file', pdfDoc);
             
-            const response = await fetch('http://192.168.100.35:9004/upload', {
+            const response = await fetch('http://10.118.82.6:9004/upload', {
                 method: 'POST',
                 body: data
             });

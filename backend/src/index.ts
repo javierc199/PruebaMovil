@@ -34,8 +34,7 @@ import {OpenAIApi, Configuration} from 'openai'
 import * as path from "path";
 
 const configuration = new Configuration({
-    apiKey: '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',
-    organization: 'org-klzHQ3cA5Tea03YNnTSZGyht',
+    apiKey: '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',
 })
 const openai = new OpenAIApi(configuration)
 
